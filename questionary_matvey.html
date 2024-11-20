@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Метаданные -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета выпускника</title>
+    <!-- Подключение Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Дополнительные стили -->
+    <link rel="stylesheet" href="staticfiles/questionary.css">
+    <!-- Дополнительные стили для холдеров фото -->
+</head>
+<body>
+    
+    <!-- Шапка сайта (Header) -->
+    <header>
+        <!-- Навигационная панель -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+
+                <!-- Логотип или название сайта -->
+                <a class="navbar-brand" href="index.html">ВекторВыбора</a>
+                <!-- Кнопка для мобильного меню -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Ссылки навигации -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Главная <span class="visually-hidden">(текущая)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">О проекте</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основной контент страницы (Main Content) -->
+    <main class="container my-5">
+
+        <!-- Карточка анкеты выпускника -->
+        <div class="card">
+            <div class="card-body">
+                <!-- Заголовок с именем выпускника -->
+                <h2 class="card-title text-center mb-4">Матвей</h2>
+                
+                <!-- Холдер для фото -->
+                <div class="text-center">
+                    <img src="staticfiles/images/man.webp" class="img-fluid rounded mb-4" alt="Фото Матвея" style="max-width: 100%; height: auto; display: inline-block;">
+                </div>
+
+                <!-- Анкета в формате FAQ (Accordion) -->
+                <section id="faq" class="bg-light py-4">
+                    <div class="container">
+                        <h3 class="text-center mb-4">Анкета выпускника</h3>
+                        <div class="accordion" id="faqAccordion">
+                            <!-- Вопросы с ответами -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                        1. С какого класса учился(ась) в лицее?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        С седьмого класса.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                        2. Что было самое сложное в учебный период?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Проснуться утром, а потом не заснуть на скучном уроке.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                        3. Профиль класса, в котором учился(ась)?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Физмат, с 10-го класса соцэконом.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                        4. Как выбирал(а) ВУЗ?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Выбирал по предмету. Математика нравиться больше других дисциплин.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                        5. В какой ВУЗ поступил(а)?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        МГУ.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                        6. На какой факультет поступил(а)?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Экономический.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                                        7. Это был «ВУЗ мечты» или скорее «Реальный вариант»?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Совпало.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading8">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                                        8. Мама была рада твоему выбору ВУЗа и факультета?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Скорее да.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading9">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+                                        9. По каким предметам сдавал(а) экзамены?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Математика, физика, информатика и русский язык, ДВИ по математике (самый сложный).
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading10">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
+                                        10. Что было самым сложным на ЕГЭ?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Не проспать.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading11">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11" aria-expanded="false" aria-controls="faqCollapse11">
+                                        11. Была ли привилегия «БВИ»?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse11" class="accordion-collapse collapse" aria-labelledby="faqHeading11" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        БВИ не было.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading12">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12" aria-expanded="false" aria-controls="faqCollapse12">
+                                        12. Какие олимпиады взял(а)?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse12" class="accordion-collapse collapse" aria-labelledby="faqHeading12" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Олимпиады не писал.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading13">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13" aria-expanded="false" aria-controls="faqCollapse13">
+                                        13. Как готовился(ась): курсы, кружки, репетиторы?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse13" class="accordion-collapse collapse" aria-labelledby="faqHeading13" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Репетиторы.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading14">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse14" aria-expanded="false" aria-controls="faqCollapse14">
+                                        14. Каким своим достижением, дипломом гордишься больше всего?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse14" class="accordion-collapse collapse" aria-labelledby="faqHeading14" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Ничем не горжусь.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading15">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse15" aria-expanded="false" aria-controls="faqCollapse15">
+                                        15. Что бы посоветовал(а) себе в школьный период?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse15" class="accordion-collapse collapse" aria-labelledby="faqHeading15" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Носить еду с собой в лицей.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading16">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse16" aria-expanded="false" aria-controls="faqCollapse16">
+                                        16. Что посоветуешь будущим выпускникам?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse16" class="accordion-collapse collapse" aria-labelledby="faqHeading16" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Не париться по поводу ЕГЭ. Все сдадут и точно поступят.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading17">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse17" aria-expanded="false" aria-controls="faqCollapse17">
+                                        17. Кого из учителей нужно обнять от твоего имени?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse17" class="accordion-collapse collapse" aria-labelledby="faqHeading17" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Я не лицемер. С учителями у меня дистанция. Если это вопрос про уважение, то нескольким педагогам я бы от души пожал руку.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading18">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse18" aria-expanded="false" aria-controls="faqCollapse18">
+                                        18. Рекомендуй выпускника, который по твоему мнению, должен попасть на сайт «Лицей в лицах»?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse18" class="accordion-collapse collapse" aria-labelledby="faqHeading18" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Без рекомендаций.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Кнопка возврата на главную страницу -->
+                <div class="text-center mt-4">
+                    <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер сайта (Footer) -->
+    <footer class="text-muted py-4 bg-light" id="footer">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2024 ВекторВыбора пути</p>
+            <p class="mb-0">Связаться с нами: <a href="mailto:info@vectorvybora.ru">info@vectorvybora.ru</a></p>
+        </div>
+    </footer>
+
+    <!-- Подключение Bootstrap 5.3.3 JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
