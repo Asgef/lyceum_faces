@@ -1,0 +1,55 @@
+.photo-placeholder {
+    width: 100%;
+    padding-top: 75%; /* Соотношение сторон 4:3 */
+    background-color: #e9ecef;
+    position: relative;
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.photo-placeholder::after {
+    content: "Фото";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Стиль для активного заголовка аккордеона */
+.accordion-button:not(.collapsed) {
+    color: #0d6efd;
+    background-color: #e7f1ff;
+}
+
+
+.snap-card {
+    width: calc(100% - 1rem); /* Уменьшаем ширину на отступ, чтобы исключить горизонтальный скролл */
+    scroll-snap-align: start;
+    margin-right: 1rem; /* Отступ между карточками */
+}
+
+@media (min-width: 576px) and (orientation: landscape) {
+    .snap-card {
+        width: calc(50% - 1rem); /* Для двух карточек */
+    }
+}
+
+@media (min-width: 768px) {
+    .snap-card {
+        width: calc(33.333% - 1rem); /* Для трех карточек */
+    }
+}
+
+@media (min-width: 992px) {
+    .snap-card {
+        width: calc(25% - 1rem); /* Для четырех карточек */
+    }
+}
+
+/* Удаляем последний отступ у последней карточки */
+.snap-card:last-child {
+    margin-right: 0;
+}
