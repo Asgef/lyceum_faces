@@ -53,3 +53,57 @@
 .snap-card:last-child {
     margin-right: 0;
 }
+
+
+/* Стиль баннера */
+.banner-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Фоновое облако для текста */
+.blurred-cloud {
+    position: absolute;
+    width: 70%;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(90px);
+    background: rgba(244, 242, 242, 0.9);
+    z-index: 1;
+}
+
+.text-container {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+}
+
+/* Тень для текста */
+.text-shadow {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+/* Более толстый текст для описания */
+.fw-semibold {
+    font-weight: 600; /* Толщина шрифта чуть больше, чем стандартная */
+}
+
+/* Адаптация для планшетов и десктопов */
+@media (min-width: 768px) {
+    .banner-section {
+        height: 60vh;
+    }
+    .text-container h1 {
+        font-size: 3.5rem;
+    }
+    .text-container p {
+        font-size: 1.5rem;
+    }
+}
